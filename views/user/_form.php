@@ -1,14 +1,14 @@
 <?php
 
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
+use kasadigital\modules\UserManagement\models\User;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\Html;
+use yii\bootstrap4\ActiveForm;
+use kasadigital\extensions\BootstrapSwitch\BootstrapSwitch;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\User $model
+ * @var kasadigital\modules\UserManagement\models\User $model
  * @var yii\bootstrap\ActiveForm $form
  */
 ?>
@@ -17,7 +17,7 @@ use webvimark\extensions\BootstrapSwitch\BootstrapSwitch;
 
 	<?php $form = ActiveForm::begin([
 		'id'=>'user',
-		'layout'=>'horizontal',
+		'layout'=>ActiveForm::LAYOUT_HORIZONTAL,
 		'validateOnBlur' => false,
 	]); ?>
 

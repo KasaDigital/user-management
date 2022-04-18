@@ -1,15 +1,15 @@
 <?php
 
-namespace webvimark\modules\UserManagement\controllers;
+namespace kasadigital\modules\UserManagement\controllers;
 
 
-use webvimark\modules\UserManagement\components\AuthHelper;
-use webvimark\modules\UserManagement\models\rbacDB\AbstractItem;
-use webvimark\modules\UserManagement\models\rbacDB\Permission;
-use webvimark\modules\UserManagement\models\rbacDB\Route;
-use webvimark\modules\UserManagement\models\rbacDB\search\PermissionSearch;
-use webvimark\components\AdminDefaultController;
-use webvimark\modules\UserManagement\UserManagementModule;
+use kasadigital\modules\UserManagement\components\AuthHelper;
+use kasadigital\modules\UserManagement\models\rbacDB\AbstractItem;
+use kasadigital\modules\UserManagement\models\rbacDB\Permission;
+use kasadigital\modules\UserManagement\models\rbacDB\Route;
+use kasadigital\modules\UserManagement\models\rbacDB\search\PermissionSearch;
+use kasadigital\components\AdminDefaultController;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use Yii;
 
 class PermissionController extends AdminDefaultController
@@ -17,12 +17,12 @@ class PermissionController extends AdminDefaultController
 	/**
 	 * @var Permission
 	 */
-	public $modelClass = 'webvimark\modules\UserManagement\models\rbacDB\Permission';
+	public $modelClass = 'kasadigital\modules\UserManagement\models\rbacDB\Permission';
 
 	/**
 	 * @var PermissionSearch
 	 */
-	public $modelSearchClass = 'webvimark\modules\UserManagement\models\rbacDB\search\PermissionSearch';
+	public $modelSearchClass = 'kasadigital\modules\UserManagement\models\rbacDB\search\PermissionSearch';
 
 	/**
 	 * @param string $id

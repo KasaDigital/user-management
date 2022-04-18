@@ -1,11 +1,11 @@
 <?php
 
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use yii\bootstrap4\Html;
+use yii\bootstrap4\ActiveForm;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\search\UserSearch $model
+ * @var kasadigital\modules\UserManagement\models\search\UserSearch $model
  * @var yii\widgets\ActiveForm $form
  */
 ?>

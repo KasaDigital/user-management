@@ -1,16 +1,16 @@
 <?php
 
-use webvimark\extensions\DateRangePicker\DateRangePicker;
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
+use kasadigital\extensions\DateRangePicker\DateRangePicker;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\Html;
 use yii\widgets\Pjax;
-use webvimark\extensions\GridPageSize\GridPageSize;
+use kasadigital\extensions\GridPageSize\GridPageSize;
 use yii\grid\GridView;
 
 /**
  * @var yii\web\View $this
  * @var yii\data\ActiveDataProvider $dataProvider
- * @var webvimark\modules\UserManagement\models\search\UserVisitLogSearch $searchModel
+ * @var kasadigital\modules\UserManagement\models\search\UserVisitLogSearch $searchModel
  */
 
 $this->title = UserManagementModule::t('back', 'Visit log');
@@ -20,9 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	<?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-	<div class="panel panel-default">
-
-		<div class="panel-body">
+	<div class="card card-info">
+            <div class="card-header">
+                
+            </div>
+		<div class="card-body">
 
 			<div class="row">
 				<div class="col-sm-12 text-right">
@@ -69,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					[
 						'class' => 'yii\grid\ActionColumn',
 						'template'=>'{view}',
-						'contentOptions'=>['style'=>'width:70px; text-align:center;'],
+						'contentOptions'=>['style'=>'width:100px; text-align:center;'],
 					],
 				],
 			]); ?>

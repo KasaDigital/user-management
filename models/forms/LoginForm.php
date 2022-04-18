@@ -1,9 +1,9 @@
 <?php
-namespace webvimark\modules\UserManagement\models\forms;
+namespace kasadigital\modules\UserManagement\models\forms;
 
-use webvimark\helpers\LittleBigHelper;
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
+use kasadigital\helpers\LittleBigHelper;
+use kasadigital\modules\UserManagement\models\User;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use yii\base\Model;
 use Yii;
 

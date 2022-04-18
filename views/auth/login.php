@@ -1,23 +1,23 @@
 <?php
 /**
  * @var $this yii\web\View
- * @var $model webvimark\modules\UserManagement\models\forms\LoginForm
+ * @var $model kasadigital\modules\UserManagement\models\forms\LoginForm
  */
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\components\GhostHtml;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\ActiveForm;
+use yii\bootstrap4\Html;
 ?>
 
 <div class="container" id="login-wrapper">
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">
+			<div class="card card-info">
+				<div class="card-header">
 					<h3 class="panel-title"><?= UserManagementModule::t('front', 'Authorization') ?></h3>
 				</div>
-				<div class="panel-body">
+				<div class="card-body">
 
 					<?php $form = ActiveForm::begin([
 						'id'      => 'login-form',

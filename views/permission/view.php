@@ -9,10 +9,10 @@
  * @var yii\rbac\Permission $item
  */
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\UserManagementModule;
+use kasadigital\modules\UserManagement\components\GhostHtml;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\bootstrap4\Html;
 
 $this->title = UserManagementModule::t('back', 'Settings for permission') . ': ' . $item->description;
 $this->params['breadcrumbs'][] = ['label' => UserManagementModule::t('back', 'Permissions'), 'url' => ['index']];
@@ -35,13 +35,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
 	<div class="col-sm-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-info">
+			<div class="card-header">
 				<strong>
 					<span class="glyphicon glyphicon-th"></span> <?= UserManagementModule::t('back', 'Child permissions') ?>
 				</strong>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 
 				<?= Html::beginForm(['set-child-permissions', 'id'=>$item->name]) ?>
 
@@ -87,8 +87,8 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 
 	<div class="col-sm-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-info">
+			<div class="card-header">
 				<strong>
 					<span class="glyphicon glyphicon-th"></span> Routes
 
@@ -115,7 +115,7 @@ $this->params['breadcrumbs'][] = $this->title;
 				</strong>
 			</div>
 
-			<div class="panel-body">
+			<div class="card-body">
 
 				<?= Html::beginForm(['set-child-routes', 'id'=>$item->name]) ?>
 

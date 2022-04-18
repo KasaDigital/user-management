@@ -3,17 +3,18 @@
  * @var $this yii\web\View
  */
 
-namespace webvimark\modules\UserManagement\components;
+namespace kasadigital\modules\UserManagement\components;
 
-use webvimark\modules\UserManagement\models\User;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\models\User;
+//use yii\helpers\Html;
+use yii\bootstrap4\Html;
 
 /**
  * Class GhostHtml
  *
  * Show elements only to those, who can access to them
  *
- * @package webvimark\modules\UserManagement\components
+ * @package kasadigital\modules\UserManagement\components
  */
 class GhostHtml extends Html
 {

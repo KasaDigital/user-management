@@ -1,19 +1,19 @@
 <?php
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\components\GhostHtml;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\Html;
 use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 use yii\widgets\Pjax;
-use webvimark\extensions\GridBulkActions\GridBulkActions;
-use webvimark\extensions\GridPageSize\GridPageSize;
+use kasadigital\extensions\GridBulkActions\GridBulkActions;
+use kasadigital\extensions\GridPageSize\GridPageSize;
 use yii\grid\GridView;
 
 /**
  * @var yii\web\View $this
  * @var yii\data\ActiveDataProvider $dataProvider
- * @var webvimark\modules\UserManagement\models\rbacDB\search\AuthItemGroupSearch $searchModel
+ * @var kasadigital\modules\UserManagement\models\rbacDB\search\AuthItemGroupSearch $searchModel
  */
 
 $this->title = UserManagementModule::t('back', 'Permission groups');
@@ -21,13 +21,13 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="auth-item-group-index">
 
-	<h2 class="lte-hide-title"><?= $this->title ?></h2>
-
 	<?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-	<div class="panel panel-default">
-
-		<div class="panel-body">
+	<div class="card card-info">
+<div class="card-header">
+                <h2 class="lte-hide-title"><?= $this->title ?></h2>
+            </div>
+		<div class="card-body">
 			<div class="row">
 				<div class="col-sm-6">
 					<p>
@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					['class' => 'yii\grid\CheckboxColumn', 'options'=>['style'=>'width:10px'] ],
 					[
 						'class' => 'yii\grid\ActionColumn',
-						'contentOptions'=>['style'=>'width:70px; text-align:center;'],
+						'contentOptions'=>['style'=>'width:100px; text-align:center;'],
 					],
 				],
 			]); ?>

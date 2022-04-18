@@ -1,11 +1,10 @@
 <?php
 
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\UserManagementModule;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\User $model
+ * @var kasadigital\modules\UserManagement\models\User $model
  */
 
 $this->title = UserManagementModule::t('back', 'User creation');
@@ -16,10 +15,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	<h2 class="lte-hide-title"><?= $this->title ?></h2>
 
-	<div class="panel panel-default">
-		<div class="panel-body">
-
-			<?= $this->render('_form', compact('model')) ?>
+	<div class="card card-info">
+		<div class="card-body">
+			<?php echo $this->render('_form', ['model'=>$model]); ?>
 		</div>
 	</div>
 

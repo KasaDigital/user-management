@@ -1,10 +1,10 @@
 <?php
-namespace webvimark\modules\UserManagement\components;
+namespace kasadigital\modules\UserManagement\components;
 
-use webvimark\modules\UserManagement\models\forms\ConfirmEmailForm;
-use webvimark\modules\UserManagement\models\forms\PasswordRecoveryForm;
-use webvimark\modules\UserManagement\models\forms\RegistrationForm;
-use webvimark\modules\UserManagement\models\User;
+use kasadigital\modules\UserManagement\models\forms\ConfirmEmailForm;
+use kasadigital\modules\UserManagement\models\forms\PasswordRecoveryForm;
+use kasadigital\modules\UserManagement\models\forms\RegistrationForm;
+use kasadigital\modules\UserManagement\models\User;
 use yii\base\Event;
 
 class UserAuthEvent extends Event

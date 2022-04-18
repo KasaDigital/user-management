@@ -1,12 +1,12 @@
 <?php
 
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\Html;
+use yii\bootstrap4\ActiveForm;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\forms\ChangeOwnPasswordForm $model
+ * @var kasadigital\modules\UserManagement\models\forms\ChangeOwnPasswordForm $model
  */
 
 $this->title = UserManagementModule::t('back', 'Change own password');
@@ -14,10 +14,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="change-own-password">
 
-	<h2 class="lte-hide-title"><?= $this->title ?></h2>
-
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<div class="card card-info">
+            <div class="card-header">
+                <h2 class="lte-hide-title"><?= $this->title ?></h2>
+            </div>
+		<div class="card-body">
 
 			<?php if ( Yii::$app->session->hasFlash('success') ): ?>
 				<div class="alert alert-success text-center">

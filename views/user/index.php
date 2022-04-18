@@ -1,21 +1,21 @@
 <?php
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\models\rbacDB\Role;
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\components\GhostHtml;
+use kasadigital\modules\UserManagement\models\rbacDB\Role;
+use kasadigital\modules\UserManagement\models\User;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\Html;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\widgets\Pjax;
-use webvimark\extensions\GridBulkActions\GridBulkActions;
-use webvimark\extensions\GridPageSize\GridPageSize;
+use kasadigital\extensions\GridBulkActions\GridBulkActions;
+use kasadigital\extensions\GridPageSize\GridPageSize;
 use yii\grid\GridView;
 
 /**
  * @var yii\web\View $this
  * @var yii\data\ActiveDataProvider $dataProvider
- * @var webvimark\modules\UserManagement\models\search\UserSearch $searchModel
+ * @var kasadigital\modules\UserManagement\models\search\UserSearch $searchModel
  */
 
 $this->title = UserManagementModule::t('back', 'Users');
@@ -25,8 +25,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	<h2 class="lte-hide-title"><?= $this->title ?></h2>
 
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<div class="card card-info">
+		<div class="card-body">
 
 			<div class="row">
 				<div class="col-sm-6">
@@ -73,7 +73,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					['class' => 'yii\grid\SerialColumn', 'options'=>['style'=>'width:10px'] ],
 
 					[
-						'class'=>'webvimark\components\StatusColumn',
+						'class'=>'kasadigital\components\StatusColumn',
 						'attribute'=>'superadmin',
 						'visible'=>Yii::$app->user->isSuperadmin,
 					],
@@ -91,7 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						'visible'=>User::hasPermission('viewUserEmail'),
 					],
 					[
-						'class'=>'webvimark\components\StatusColumn',
+						'class'=>'kasadigital\components\StatusColumn',
 						'attribute'=>'email_confirmed',
 						'visible'=>User::hasPermission('viewUserEmail'),
 					],
@@ -138,7 +138,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						],
 					],
 					[
-						'class'=>'webvimark\components\StatusColumn',
+						'class'=>'kasadigital\components\StatusColumn',
 						'attribute'=>'status',
 						'optionsArray'=>[
 							[User::STATUS_ACTIVE, UserManagementModule::t('back', 'Active'), 'success'],
@@ -149,7 +149,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					['class' => 'yii\grid\CheckboxColumn', 'options'=>['style'=>'width:10px'] ],
 					[
 						'class' => 'yii\grid\ActionColumn',
-						'contentOptions'=>['style'=>'width:70px; text-align:center;'],
+						'contentOptions'=>['style'=>'width:100px; text-align:center;'],
 					],
 				],
 			]); ?>

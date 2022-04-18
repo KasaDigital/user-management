@@ -1,15 +1,15 @@
 <?php
 
-namespace webvimark\modules\UserManagement\controllers;
+namespace kasadigital\modules\UserManagement\controllers;
 
-use webvimark\components\BaseController;
-use webvimark\modules\UserManagement\components\UserAuthEvent;
-use webvimark\modules\UserManagement\models\forms\ChangeOwnPasswordForm;
-use webvimark\modules\UserManagement\models\forms\ConfirmEmailForm;
-use webvimark\modules\UserManagement\models\forms\LoginForm;
-use webvimark\modules\UserManagement\models\forms\PasswordRecoveryForm;
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
+use kasadigital\components\BaseController;
+use kasadigital\modules\UserManagement\components\UserAuthEvent;
+use kasadigital\modules\UserManagement\models\forms\ChangeOwnPasswordForm;
+use kasadigital\modules\UserManagement\models\forms\ConfirmEmailForm;
+use kasadigital\modules\UserManagement\models\forms\LoginForm;
+use kasadigital\modules\UserManagement\models\forms\PasswordRecoveryForm;
+use kasadigital\modules\UserManagement\models\User;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use Yii;
 use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;

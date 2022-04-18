@@ -1,16 +1,16 @@
 <?php
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\models\rbacDB\Role;
-use webvimark\modules\UserManagement\models\User;
-use webvimark\modules\UserManagement\UserManagementModule;
+use kasadigital\modules\UserManagement\components\GhostHtml;
+use kasadigital\modules\UserManagement\models\rbacDB\Role;
+use kasadigital\modules\UserManagement\models\User;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\bootstrap4\Html;
 use yii\widgets\DetailView;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\User $model
+ * @var kasadigital\modules\UserManagement\models\User $model
  */
 
 $this->title = $model->username;
@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	<h2 class="lte-hide-title"><?= $this->title ?></h2>
 
-	<div class="panel panel-default">
+	<div class="card card-default">
 		<div class="panel-body">
 
 		    <p>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			) ?>
 
 			<?= GhostHtml::a(UserManagementModule::t('back', 'Delete'), ['delete', 'id' => $model->id], [
-			    'class' => 'btn btn-sm btn-danger pull-right',
+			    'class' => 'btn btn-sm btn-danger float-right',
 			    'data' => [
 				'confirm' => UserManagementModule::t('back', 'Are you sure you want to delete this user?'),
 				'method' => 'post',

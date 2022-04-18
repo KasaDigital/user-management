@@ -1,12 +1,12 @@
 <?php
 
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\Html;
+use yii\bootstrap4\ActiveForm;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\rbacDB\AuthItemGroup $model
+ * @var kasadigital\modules\UserManagement\models\rbacDB\AuthItemGroup $model
  * @var yii\bootstrap\ActiveForm $form
  */
 ?>
@@ -14,7 +14,7 @@ use yii\bootstrap\ActiveForm;
 
 	<?php $form = ActiveForm::begin([
 		'id'=>'auth-item-group-form',
-		'layout'=>'horizontal',
+		'layout'=>ActiveForm::LAYOUT_HORIZONTAL,
 		'validateOnBlur' => false,
 
 	]); ?>

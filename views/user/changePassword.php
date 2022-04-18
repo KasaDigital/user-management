@@ -1,12 +1,12 @@
 <?php
 
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\ActiveForm;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\ActiveForm;
+use yii\bootstrap4\Html;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\User $model
+ * @var kasadigital\modules\UserManagement\models\User $model
  */
 
 $this->title = UserManagementModule::t('back', 'Changing password for user: ') . ' ' . $model->username;
@@ -18,14 +18,14 @@ $this->params['breadcrumbs'][] = UserManagementModule::t('back', 'Changing passw
 
 	<h2 class="lte-hide-title"><?= $this->title ?></h2>
 
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<div class="card card-info">
+		<div class="card-body">
 
 			<div class="user-form">
 
 				<?php $form = ActiveForm::begin([
 					'id'=>'user',
-					'layout'=>'horizontal',
+					'layout'=>ActiveForm::LAYOUT_HORIZONTAL,
 				]); ?>
 
 				<?= $form->field($model, 'password')->passwordInput(['maxlength' => 255, 'autocomplete'=>'off']) ?>

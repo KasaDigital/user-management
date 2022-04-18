@@ -1,18 +1,18 @@
 <?php
 /**
  * @var yii\widgets\ActiveForm $form
- * @var webvimark\modules\UserManagement\models\rbacDB\Role $model
+ * @var kasadigital\modules\UserManagement\models\rbacDB\Role $model
  */
-use webvimark\modules\UserManagement\models\rbacDB\AuthItemGroup;
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\bootstrap\ActiveForm;
+use kasadigital\modules\UserManagement\models\rbacDB\AuthItemGroup;
+use kasadigital\modules\UserManagement\UserManagementModule;
+use yii\bootstrap4\ActiveForm;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\bootstrap4\Html;
 ?>
 
 <?php $form = ActiveForm::begin([
 	'id'             => 'role-form',
-	'layout'         => 'horizontal',
+	'layout'=>ActiveForm::LAYOUT_HORIZONTAL,
 	'validateOnBlur' => false,
 ]) ?>
 

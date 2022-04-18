@@ -10,11 +10,11 @@
  * @var yii\rbac\Role $role
  */
 
-use webvimark\modules\UserManagement\components\GhostHtml;
-use webvimark\modules\UserManagement\models\rbacDB\Role;
-use webvimark\modules\UserManagement\UserManagementModule;
+use kasadigital\modules\UserManagement\components\GhostHtml;
+use kasadigital\modules\UserManagement\models\rbacDB\Role;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\bootstrap4\Html;
 
 $this->title = UserManagementModule::t('back', 'Permissions for role:') . ' '. $role->description;
 $this->params['breadcrumbs'][] = ['label' => UserManagementModule::t('back', 'Roles'), 'url' => ['index']];
@@ -36,13 +36,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="row">
 	<div class="col-sm-4">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-info">
+			<div class="card-heading">
 				<strong>
 					<span class="glyphicon glyphicon-th"></span> <?= UserManagementModule::t('back', 'Child roles') ?>
 				</strong>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<?= Html::beginForm(['set-child-roles', 'id'=>$role->name]) ?>
 
 				<?php foreach ($allRoles as $aRole): ?>
@@ -73,13 +73,13 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 
 	<div class="col-sm-8">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="card card-info">
+			<div class="card-heading">
 				<strong>
 					<span class="glyphicon glyphicon-th"></span> <?= UserManagementModule::t('back', 'Permissions') ?>
 				</strong>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<?= Html::beginForm(['set-child-permissions', 'id'=>$role->name]) ?>
 
 				<div class="row">

@@ -1,12 +1,11 @@
 <?php
 
-use webvimark\modules\UserManagement\UserManagementModule;
-use yii\helpers\Html;
+use kasadigital\modules\UserManagement\UserManagementModule;
 use yii\widgets\DetailView;
 
 /**
  * @var yii\web\View $this
- * @var webvimark\modules\UserManagement\models\UserVisitLog $model
+ * @var kasadigital\modules\UserManagement\models\UserVisitLog $model
  */
 
 $this->title = $model->id;
@@ -16,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="user-visit-log-view">
 
 
-	<div class="panel panel-default">
-		<div class="panel-body">
+	<div class="card card-info">
+		<div class="card-body">
 
 			<?= DetailView::widget([
 				'model' => $model,
